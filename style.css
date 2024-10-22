@@ -1,4 +1,7 @@
 * {
+  --big-bubble-height: 500px;
+  --green-bubble-height: 480px;
+  --purple-bubble-height: 390px;
   --icon-space: 1.3em;
   margin: 0;
   padding: 0;
@@ -9,9 +12,16 @@ body {
   background: #fff8e5;
 }
 
+.container {
+  position: relative;
+  height: calc(var(--big-bubble-height) + var(--green-bubble-height) + var(--purple-bubble-height));
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .header {
   width: 100%;
-  height: 500px;
+  height: var(--big-bubble-height);
   background-size: 181%;
   background-position: left -270px bottom;
   background-repeat: no-repeat;
@@ -31,7 +41,7 @@ body {
 
 .green {
   width: 480px;
-  height: 480px;
+  height: var(--green-bubble-height);
   position: absolute;
   top: 145px;
   left: -100px;
@@ -50,13 +60,12 @@ body {
 }
 
 .purple {
-  width: 390px;
-  height: 390px;
   position: absolute;
+  width: 390px;
+  height: var(--purple-bubble-height);
   right: -100px;
   background-image: url(img/purpleBubble.png);
   background-size: cover;
-  z-index: -1;
 }
 
 .purple_text {
@@ -70,6 +79,23 @@ body {
   left: 26%;
 }
 
+.video_container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 66%;
+  text-align: center;
+}
+
+.prom_video {
+  width: 350px;
+  height: 230px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  background-color: #f0f0f0;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* @media screen and (max-width: 600px) {
 
